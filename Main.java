@@ -16,7 +16,9 @@ public class Main {
     public static double Division(double Nomber1 , double Nomber2){
         return Nomber1 / Nomber2;
     }
-
+    public static double Puissance(double Nomber1 , double Nomber2){
+        return Math.pow(Nomber1,Nomber2);
+    }
     public static void main(String[] args) {
         double Nomber1 = 0  , Nomber2 = 0;
         int chose ;
@@ -27,10 +29,11 @@ public class Main {
             System.out.println("2-Soustraction");
             System.out.println("3-Multiplication");
             System.out.println("4-Division");
+            System.out.println("5-Puissance");
             System.out.println("-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.print("choisir une opération parmi menu  : ");
             chose = input.nextInt();
-            if (chose >=1 && chose <=4) {
+            if (chose >=1 && chose <=5) {
                 System.out.print("Entre 1ere Nbr : ");
                 Nomber1 = input.nextDouble();
                 System.out.print("Entre 2eme Nbr : ");
@@ -53,7 +56,9 @@ public class Main {
                     System.out.println("Division est : " + Division(Nomber1, Nomber2));
                 }
                 break;
-
+                case 5:
+                    System.out.println("Puissance est : "+ Puissance(Nomber1,Nomber2));
+                    break;
                 default:
                     System.out.println("Numero invalide !! :)))");
             }
