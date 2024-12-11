@@ -10,6 +10,9 @@ public class Main {
     public static double Soustraction(double Nomber1 ,double Nomber2){
         return Nomber1 - Nomber2;
     }
+    public static double Multiplication(double Nomber1, double Nomber2){
+        return Nomber1 * Nomber2;
+    }
 
     public static void main(String[] args) {
         double Nomber1 = 0  , Nomber2 = 0;
@@ -19,10 +22,11 @@ public class Main {
             System.out.println("⎯⎯⎯⎯✮ MENU DE CALCULATRICE  ✮⎯⎯⎯⎯⎯");
             System.out.println("1-Addition");
             System.out.println("2-Soustraction");
+            System.out.println("3-Multiplication");
             System.out.println("-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.print("choisir une opération parmi menu  : ");
             chose = input.nextInt();
-            if (chose >=1 && chose <=2) {
+            if (chose >=1 && chose <=3) {
                 System.out.print("Entre 1ere Nbr : ");
                 Nomber1 = input.nextDouble();
                 System.out.print("Entre 2eme Nbr : ");
@@ -35,7 +39,9 @@ public class Main {
                 case 2:
                     System.out.println("Soustraction est : " + Soustraction(Nomber1, Nomber2));
                     break;
-
+                case 3:
+                    System.out.println("Multiplication est :" + Multiplication(Nomber1, Nomber2));
+                    break;
                 default:
                     System.out.println("Numero invalide !! :)))");
             }
