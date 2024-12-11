@@ -1,5 +1,3 @@
-import java.math.BigDecimal;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
@@ -22,14 +20,14 @@ public class Main {
     public static double Racinecarre(double Nomber1){
         return Math.sqrt(Nomber1);
     }
-    public static long Factorielle(long Nomber1){
+    public static long Factorielle(int Nomber1){
         if (Nomber1 <= 1){
             return 1;
         }
         return Nomber1 * Factorielle(Nomber1 - 1);
     }
     public static void main(String[] args) {
-        double Nomber1 = 0  , Nomber2 = 0;
+        double Nomber1 = 0  , Nomber2 = 0 ;
         int chose ;
         Scanner input = new Scanner(System.in);
         while (true) {
@@ -41,6 +39,7 @@ public class Main {
             System.out.println("5-Puissance");
             System.out.println("6-Racine carrée");
             System.out.println("7-Factorielle");
+            System.out.println("8-QUITTE");
             System.out.println("-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.print("choisir une opération parmi menu  : ");
             chose = input.nextInt();
@@ -56,6 +55,10 @@ public class Main {
             else if (chose == 7) {
                 System.out.print("Entre un Nbr : ");
                 Nomber1 = input.nextDouble();
+            }
+            else if (chose == 8) {
+                System.out.println("Au revoir  :)))");
+                break;
             }
             switch (chose) {
                 case 1:
@@ -81,7 +84,7 @@ public class Main {
                 System.out.println("Racine carrée est : "+Racinecarre(Nomber1));
                 break;
                 case 7:
-                    System.out.println("Factorielle est : "+Factorielle((long) Nomber1));
+                    System.out.println("Factorielle est : "+Factorielle((int) Nomber1));
                     break;
                 default:
                     System.out.println("Numero invalide !! :)))");
