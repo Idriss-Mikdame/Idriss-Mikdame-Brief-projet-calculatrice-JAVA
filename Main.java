@@ -22,6 +22,12 @@ public class Main {
     public static double Racinecarre(double Nomber1){
         return Math.sqrt(Nomber1);
     }
+    public static long Factorielle(long Nomber1){
+        if (Nomber1 <= 1){
+            return 1;
+        }
+        return Nomber1 * Factorielle(Nomber1 - 1);
+    }
     public static void main(String[] args) {
         double Nomber1 = 0  , Nomber2 = 0;
         int chose ;
@@ -34,6 +40,7 @@ public class Main {
             System.out.println("4-Division");
             System.out.println("5-Puissance");
             System.out.println("6-Racine carrée");
+            System.out.println("7-Factorielle");
             System.out.println("-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.print("choisir une opération parmi menu  : ");
             chose = input.nextInt();
@@ -44,6 +51,9 @@ public class Main {
                 Nomber2 = input.nextDouble();
             }
             else if (chose == 6){
+                System.out.print("Entre un Nbr : ");
+                Nomber1 = input.nextDouble();}
+            else if (chose == 7) {
                 System.out.print("Entre un Nbr : ");
                 Nomber1 = input.nextDouble();
             }
@@ -70,6 +80,9 @@ public class Main {
                 case 6:
                 System.out.println("Racine carrée est : "+Racinecarre(Nomber1));
                 break;
+                case 7:
+                    System.out.println("Factorielle est : "+Factorielle((long) Nomber1));
+                    break;
                 default:
                     System.out.println("Numero invalide !! :)))");
             }
