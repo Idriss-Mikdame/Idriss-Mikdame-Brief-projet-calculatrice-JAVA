@@ -19,6 +19,9 @@ public class Main {
     public static double Puissance(double Nomber1 , double Nomber2){
         return Math.pow(Nomber1,Nomber2);
     }
+    public static double Racinecarre(double Nomber1){
+        return Math.sqrt(Nomber1);
+    }
     public static void main(String[] args) {
         double Nomber1 = 0  , Nomber2 = 0;
         int chose ;
@@ -30,6 +33,7 @@ public class Main {
             System.out.println("3-Multiplication");
             System.out.println("4-Division");
             System.out.println("5-Puissance");
+            System.out.println("6-Racine carrée");
             System.out.println("-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.print("choisir une opération parmi menu  : ");
             chose = input.nextInt();
@@ -38,6 +42,10 @@ public class Main {
                 Nomber1 = input.nextDouble();
                 System.out.print("Entre 2eme Nbr : ");
                 Nomber2 = input.nextDouble();
+            }
+            else if (chose == 6){
+                System.out.print("Entre un Nbr : ");
+                Nomber1 = input.nextDouble();
             }
             switch (chose) {
                 case 1:
@@ -59,6 +67,9 @@ public class Main {
                 case 5:
                     System.out.println("Puissance est : "+ Puissance(Nomber1,Nomber2));
                     break;
+                case 6:
+                System.out.println("Racine carrée est : "+Racinecarre(Nomber1));
+                break;
                 default:
                     System.out.println("Numero invalide !! :)))");
             }
